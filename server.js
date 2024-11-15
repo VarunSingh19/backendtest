@@ -20,6 +20,10 @@ mongoose.connect(process.env.MONGODB_URI, {
 app.use('/api/users', userRoutes);
 // app.use('/api/gemini', geminiRoutes);
 
+// Root route
+app.get('/', (req, res) => {
+    res.send('Server is running!');
+});
 
 
 // Endpoint to handle generating content
